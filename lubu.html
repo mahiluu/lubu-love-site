@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do You Love Me, Lubu?</title>
+  <style>
+    body {
+      background-color: #fff0f6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #d63384;
+    }
+    .button {
+      padding: 15px 30px;
+      margin: 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .yes {
+      background-color: #ff69b4;
+      color: white;
+    }
+    .no {
+      background-color: #e0e0e0;
+      color: #333;
+      position: absolute;
+    }
+    #response {
+      font-size: 2rem;
+      color: #ff1493;
+      margin-top: 50px;
+    }
+    #lubu-pic {
+      margin-top: 20px;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Do you love me Lubu?</h1>
+  <button class="button yes" onclick="showLove()">Yes</button>
+  <button class="button no" onmouseover="moveButton(this)">No</button>
+  <div id="response"></div>
+
+  <script>
+    function showLove() {
+      document.getElementById('response').innerHTML =
+        "😘 I know my jaan 💖<br><img id='lubu-pic' src='https://scontent.fcgp27-1.fna.fbcdn.net/v/t39.30808-1/487508272_122124421436694687_7209678811377193332_n.jpg?stp=c0.0.969.969a_dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e99d92&_nc_ohc=POKOCoYVS0cQ7kNvwGKzcwD&_nc_oc=AdmUXqGMeFIAFJe9t48HU-lNPBNhU1hbu1j4rz2BurjZFnnlr9f9kT1VlxUG7tIKcfE&_nc_zt=24&_nc_ht=scontent.fcgp27-1.fna&_nc_gid=L8m8Ju9l0HnhY3k1YWIK4A&oh=00_AfFc6AlekczwotSgybsecWykn26RSlHxmqiceR5Lh8GY4A&oe=6801C5B4'Lubu'>";
+    }
+
+    function moveButton(btn) {
+      const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+      btn.style.left = x + 'px';
+      btn.style.top = y + 'px';
+    }
+  </script>
+</body>
+</html>
